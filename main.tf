@@ -17,24 +17,24 @@ resource "digitalocean_firewall" "_" {
   inbound_rule {
     protocol         = "tcp"
     port_range       = "22"
-    source_addresses = ["0.0.0.0/0"]
+    source_addresses = ["8.8.8.8/32"]
   }
 
   outbound_rule {
     protocol              = "tcp"
     port_range            = "1-65535"
-    destination_addresses = ["0.0.0.0/0"]
+    destination_addresses = ["8.8.8.8/32"]
   }
 
   outbound_rule {
     protocol              = "udp"
     port_range            = "1-65535"
-    destination_addresses = ["0.0.0.0/0"]
+    destination_addresses = ["8.8.8.8/32"]
   }
 
   outbound_rule {
     protocol              = "icmp"
-    destination_addresses = ["0.0.0.0/0"]
+    destination_addresses = ["8.8.8.8/32"]
   }
 
 }
