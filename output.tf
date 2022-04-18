@@ -1,3 +1,3 @@
 output "ip_address" {
-  value = digitalocean_droplet._.ipv4_address
+  value = digitalocean_floating_ip._.ip_address
 }
